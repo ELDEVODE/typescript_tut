@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "typescript_tut_backend": {
+      "build": "npx azle typescript_tut_backend",
+      "candid": "src/typescript_tut_backend/typescript_tut_backend.did",
+      "gzip": true,
+      "main": "src/typescript_tut_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/typescript_tut_backend/typescript_tut_backend.wasm"
+    },
+    "typescript_tut_frontend": {
+      "dependencies": [
+        "typescript_tut_backend"
+      ],
+      "source": [
+        "src/typescript_tut_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "typescript_tut_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
